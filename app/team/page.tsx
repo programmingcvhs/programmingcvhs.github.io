@@ -8,19 +8,19 @@ import { Card } from '@/components/ui/Card'
 const teamMembers = [
   {
     id: 1,
-    name: "Alex Chen",
-    role: "Club President & Full-Stack Developer",
-    grade: "12th Grade",
-    bio: "Passionate about creating web applications that solve real-world problems. Started coding in 9th grade and now mentors fellow students.",
-    skills: ["React", "Node.js", "Python", "MongoDB"],
+    name: "Kavin Elangovan",
+    role: "Club President, Full-Stack Developer, Graphic Designer",
+    grade: "10th Grade",
+    bio: "Passionate about creating web applications that solve real-world problems. Started coding as a child and now mentors fellow students.",
+    skills: ["Python", "Node.js", "HTML/CSS/JS", "Photoshop", "API Interfaces", "Image Editing"],
     image: "/api/placeholder/400/400",
-    achievements: ["Led development of school's event management system", "1st place in regional coding competition"],
+    achievements: ["2nd place in NASA Space Apps Texas Division Projects", "Finalist at TXSEF in Biomedical Engineering"],
     social: {
       github: "https://github.com/alexchen",
       linkedin: "https://linkedin.com/in/alexchen",
       email: "alex@pawd.club"
     },
-    favoriteProject: "AI-powered study scheduler"
+    favoriteProject: "AI-powered disease detection algorithm"
   },
   {
     id: 2,
@@ -137,7 +137,7 @@ export default function TeamPage() {
             </h1>
             <p className="text-xl lg:text-2xl text-purple-100 leading-relaxed">
               The passionate developers, designers, and innovators who make PAWD a thriving community 
-              where everyone can learn, grow, and create amazing projects together.
+              where students can learn, grow, and create amazing projects together.
             </p>
           </motion.div>
         </div>
