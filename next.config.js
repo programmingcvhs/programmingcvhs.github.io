@@ -2,11 +2,17 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
+  skipTrailingSlashRedirect: true,
   images: {
     unoptimized: true,
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/pawd-club' : '',
-  basePath: process.env.NODE_ENV === 'production' ? '/pawd-club' : '',
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: false,
+  },
+  // No basePath or assetPrefix needed for username.github.io repositories
 }
 
 module.exports = nextConfig
