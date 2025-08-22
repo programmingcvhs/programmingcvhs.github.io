@@ -266,10 +266,10 @@ export default function TeamPage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Ready to Join Our Team?
+              Ready to Join PAWD?
             </h2>
             <p className="text-xl mb-10 text-purple-200 max-w-2xl mx-auto">
-              We're always looking for passionate students who want to learn, create, and make a difference in the tech community.
+              We're always looking for passionate students who want to learn, create, and make a difference in the technology community.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <motion.a
