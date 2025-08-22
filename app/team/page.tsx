@@ -24,83 +24,51 @@ const teamMembers = [
   },
   {
     id: 2,
-    name: "Sarah Rodriguez",
-    role: "Vice President & UI/UX Designer",
-    grade: "11th Grade",
-    bio: "Combines creativity with code to build beautiful, user-friendly interfaces. Believes great design makes technology accessible to everyone.",
-    skills: ["Figma", "CSS", "JavaScript", "User Research"],
+    name: "Divin Giddaluru",
+    role: "Vice President, Full-Stack Developer, Coding Instructor",
+    grade: "10th Grade",
+    bio: "Creates user-friendly, useful applications. Combines great design makes accessible technology.",
+    skills: ["Python", "Node.js", "HTML/CSS/JS", "Scientific Integration"],
     image: "/api/placeholder/400/400",
-    achievements: ["Redesigned club website with 40% better user engagement", "Mentored 15+ students in design principles"],
+    achievements: ["2nd place in NASA Space Apps Texas Division Projects", "Finalist at SEFH in Physics & Astronomy"],
     social: {
       github: "https://github.com/sarahrodriguez",
       linkedin: "https://linkedin.com/in/sarahrodriguez",
       email: "sarah@pawd.club"
     },
-    favoriteProject: "Accessibility-focused library app"
+    favoriteProject: "Quantum tunneling detection application"
   },
   {
     id: 3,
-    name: "Marcus Johnson",
-    role: "Backend Developer & Data Analyst",
-    grade: "12th Grade",
-    bio: "Loves working with data and building robust server-side applications. Always curious about how things work under the hood.",
-    skills: ["Python", "Django", "PostgreSQL", "Data Analysis"],
+    name: "Sathyan Gopal",
+    role: "Secretary, Web Development Specialist",
+    grade: "10th Grade",
+    bio: "Works with data. Builds robust server-side applications. Skilled in website creation and data management.",
+    skills: ["Python", "Node.js", "HTML/CSS/JS", "Web Development", "Data Management"],
     image: "/api/placeholder/400/400",
-    achievements: ["Built automated attendance system", "Created data visualization dashboard for student performance"],
+    achievements: ["2nd place in NASA Space Apps Texas Division Projects", "Finalist at SEFH in Physics & Astronomy"],
     social: {
       github: "https://github.com/marcusjohnson",
       linkedin: "https://linkedin.com/in/marcusjohnson",
       email: "marcus@pawd.club"
     },
-    favoriteProject: "School cafeteria nutrition tracker"
+    favoriteProject: "Integrated AI chatbot"
   },
   {
     id: 4,
-    name: "Emma Liu",
-    role: "Mobile App Developer",
-    grade: "11th Grade",
-    bio: "Focuses on creating mobile experiences that students actually want to use. Believes in mobile-first development for the next generation.",
-    skills: ["React Native", "Swift", "Firebase", "API Integration"],
+    name: "Pavan Gudivada",
+    role: "Treasurer, Social Media Manager",
+    grade: "10th Grade",
+    bio: "Integrates programming with Internet interfaces. Believes in mobile-first development.",
+    skills: ["Social Media Management", "Mobile Interfaces", "Data Management"],
     image: "/api/placeholder/400/400",
-    achievements: ["Published app with 500+ student downloads", "Organized successful hackathon event"],
+    achievements: ["Published app with 500+ student downloads", "2nd Place in Texas-level hackathon"],
     social: {
       github: "https://github.com/emmaliu",
       linkedin: "https://linkedin.com/in/emmaliu",
       email: "emma@pawd.club"
     },
-    favoriteProject: "Campus navigation app"
-  },
-  {
-    id: 5,
-    name: "David Park",
-    role: "Game Developer & 3D Artist",
-    grade: "10th Grade",
-    bio: "Passionate about game development and interactive media. Combines programming skills with artistic vision to create engaging experiences.",
-    skills: ["Unity", "C#", "Blender", "Game Design"],
-    image: "/api/placeholder/400/400",
-    achievements: ["Created educational game used in math classes", "Won school's innovation contest"],
-    social: {
-      github: "https://github.com/davidpark",
-      linkedin: "https://linkedin.com/in/davidpark",
-      email: "david@pawd.club"
-    },
-    favoriteProject: "Physics simulation learning game"
-  },
-  {
-    id: 6,
-    name: "Zoe Thompson",
-    role: "Cybersecurity Specialist",
-    grade: "12th Grade",
-    bio: "Dedicated to making the digital world safer. Teaches fellow students about online security and ethical hacking principles.",
-    skills: ["Network Security", "Ethical Hacking", "Linux", "Python"],
-    image: "/api/placeholder/400/400",
-    achievements: ["Identified and reported 3 security vulnerabilities", "Led cybersecurity awareness workshop"],
-    social: {
-      github: "https://github.com/zoethompson",
-      linkedin: "https://linkedin.com/in/zoethompson",
-      email: "zoe@pawd.club"
-    },
-    favoriteProject: "Password strength analyzer tool"
+    favoriteProject: "Computer mobile access application"
   }
 ]
 
