@@ -47,13 +47,13 @@ const phases = [
     phase: 4,
     title: "The Final Stretch",
     icon: Palette,
-    description: "Finalize your products using help from experts,",
+    description: "Finalize your products using help from experts.",
     projects: [
-      "**First Semester Project**: Choose from our curated list or propose your own",
-      "**Final Project**: A comprehensive application showcasing all your skills",
-      "**Portfolio Website**: Display your work professionally"
+      "Collaborate: Work with other groups and students to improve upon each others' projects.",
+      "Finalize: Use all the resources and help to complete your projects.",
+      "Present: Display your work professionally to students, reviewers, and developers."
     ],
-    duration: "Ongoing"
+    duration: "5-10 workdays, 3-4 presentation days"
   }
 ]
 
