@@ -50,7 +50,7 @@ export function Navbar() {
                 <Code className="w-6 h-6 text-white" />
               </motion.div>
               <span className="text-xl font-bold text-gray-900">
-                PAWD
+                Programming & Web Development Club
               </span>
             </Link>
 
