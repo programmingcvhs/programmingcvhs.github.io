@@ -32,9 +32,9 @@ export function Navbar() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
             ? 'bg-white/95 backdrop-blur-md shadow-lg'
-            : 'bg-transparent'
+            : 'bg-white/95 backdrop-blur-md shadow-lg'
         }`}
-        initial={{ y: -100 }}
+        initial={{ y: 0 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
       >
@@ -43,21 +43,13 @@ export function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2 group">
               <motion.div
-                className={`p-2 rounded-xl transition-all duration-300 ${
-                  scrolled
-                    ? 'bg-gradient-to-r from-purple-600 to-blue-600'
-                    : 'bg-white/20 backdrop-blur-sm'
-                }`}
+                className="p-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Code className="w-6 h-6 text-white" />
               </motion.div>
-              <span 
-                className={`text-xl font-bold transition-colors duration-300 ${
-                  scrolled ? 'text-gray-900' : 'text-white'
-                }`}
-              >
+              <span className="text-xl font-bold text-gray-900">
                 PAWD
               </span>
             </Link>
@@ -69,12 +61,8 @@ export function Navbar() {
                   <motion.div
                     className={`px-4 py-2 rounded-lg transition-all duration-300 relative ${
                       pathname === item.href
-                        ? scrolled
-                          ? 'text-purple-600 bg-purple-50'
-                          : 'text-white bg-white/20'
-                        : scrolled
-                        ? 'text-gray-700 hover:text-purple-600 hover:bg-purple-50'
-                        : 'text-white/80 hover:text-white hover:bg-white/10'
+                        ? 'text-purple-600 bg-purple-50'
+                        : 'text-gray-700 hover:text-purple-600 hover:bg-purple-50'
                     }`}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -82,9 +70,7 @@ export function Navbar() {
                     {item.label}
                     {pathname === item.href && (
                       <motion.div
-                        className={`absolute bottom-0 left-0 right-0 h-0.5 ${
-                          scrolled ? 'bg-purple-600' : 'bg-white'
-                        }`}
+                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-purple-600"
                         layoutId="activeTab"
                       />
                     )}
@@ -95,11 +81,7 @@ export function Navbar() {
 
             {/* Mobile Menu Button */}
             <motion.button
-              className={`md:hidden p-2 rounded-lg transition-colors duration-300 ${
-                scrolled
-                  ? 'text-gray-700 hover:bg-gray-100'
-                  : 'text-white hover:bg-white/10'
-              }`}
+              className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors duration-300"
               onClick={() => setIsOpen(!isOpen)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
