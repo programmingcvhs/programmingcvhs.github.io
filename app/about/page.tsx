@@ -61,16 +61,16 @@ const benefits = [
   {
     icon: Users,
     title: "Community Support",
-    description: "Join a network of passionate developers and mentors ready to help you succeed."
+    description: "Join a network of passionate students, developers, and mentors ready to work with you and help you succeed."
   },
   {
     icon: Trophy,
     title: "Portfolio Building",
-    description: "Create impressive projects that showcase your skills to colleges and employers."
+    description: "Create impressive projects that impact your future by showcasing your skills to colleges and employers."
   },
   {
     icon: Star,
-    title: "Real Experience",
+    title: "Hands-On Experience",
     description: "Work on actual projects that solve real problems and make a difference."
   },
   {
@@ -237,10 +237,10 @@ export default function AboutPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
-              Why Choose PAWD?
+              Why Join PAWD?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide more than just coding lessons – we build a foundation for your future in technology.
+              We provide more than just coding lessons: we build a foundation for your future in technology.
             </p>
           </motion.div>
 
@@ -310,9 +310,9 @@ export default function AboutPage() {
             </p>
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               {[
-                { label: "GitHub Integration", desc: "All projects version-controlled and showcased" },
-                { label: "Portfolio Website", desc: "Professional display of your achievements" },
-                { label: "Community Recognition", desc: "Celebrate milestones with fellow developers" }
+                { label: "Applications & Integration", desc: "All student-led projects are securely-managed and allowed to thrive with impressive features" },
+                { label: "Project Websites", desc: "Projects are given professional displays on the web, crediting all student work and accomplishments" },
+                { label: "Student Recognition", desc: "Celebrate milestones with fellow students and colleagues, receive true recognition for your hard work" }
               ].map((item, index) => (
                 <motion.div
                   key={index}
