@@ -8,7 +8,7 @@ const phases = [
   {
     phase: 1,
     title: "Learn the Basics",
-    icon: Target,
+    icon: BookOpen,
     description: "We'll start with introductory sessions on programming and basic concepts to introduce newcomers to the field.",
     languages: [
       { name: "Informational Sessions", desc: "A great starting point for beginners, introduces the objectives of PAWD", color: "bg-green-500" },
@@ -20,7 +20,7 @@ const phases = [
   {
     phase: 2,
     title: "Project-Based Learning",
-    icon: BookOpen,
+    icon: Target,
     description: "PAWD Members will vote on projects to make and work together to build them out.",
     skills: [
       "Real-World Programming Experience",
@@ -34,24 +34,24 @@ const phases = [
   {
     phase: 3,
     title: "Peer Review & Improvement",
-    icon: Palette,
+    icon: Lightbulb,
     description: "You will show your projects to professionals and regulars and improve upon your work.",
     technologies: [
       { name: "Simple Advice", desc: "Students and teachers will provide base-level advice for improvement", color: "bg-orange-500" },
       { name: "Professional Tips", desc: "Meet with professional developers to help instruct refinement", color: "bg-blue-500" },
       { name: "Reconstruction", desc: "Rebuild your projects using the critiques and improved features", color: "bg-purple-500" }
     ],
-    duration: "3-4 lessons"
+    duration: "10-20 workdays"
   },
   {
     phase: 4,
-    title: "Project Development",
-    icon: Lightbulb,
-    description: "Apply your skills to real-world projects with guidance and support",
+    title: "The Final Stretch",
+    icon: Palette,
+    description: "Finalize your products using help from experts,",
     projects: [
-      "First Semester Project: Choose from our curated list or propose your own",
-      "Final Project: A comprehensive application showcasing all your skills",
-      "Portfolio Website: Display your work professionally"
+      "**First Semester Project**: Choose from our curated list or propose your own",
+      "**Final Project**: A comprehensive application showcasing all your skills",
+      "**Portfolio Website**: Display your work professionally"
     ],
     duration: "Ongoing"
   }
