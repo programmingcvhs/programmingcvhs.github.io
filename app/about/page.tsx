@@ -7,39 +7,39 @@ import { Card } from '@/components/ui/Card'
 const phases = [
   {
     phase: 1,
-    title: "Choose Your Path",
+    title: "Learn the Basics",
     icon: Target,
-    description: "Select your preferred programming language to begin your journey",
+    description: "We'll start with introductory sessions on programming and basic concepts to introduce newcomers to the field.",
     languages: [
-      { name: "Python", desc: "Perfect for beginners, data science, and automation", color: "bg-green-500" },
-      { name: "JavaScript", desc: "The language of the web, essential for modern development", color: "bg-yellow-500" },
-      { name: "Java", desc: "Object-oriented programming for enterprise applications", color: "bg-red-500" }
+      { name: "Informational Sessions", desc: "A great starting point for beginners, introduces the objectives of PAWD", color: "bg-green-500" },
+      { name: "Programming Basics", desc: "Explaining the concepts behind programming, what makes up software", color: "bg-yellow-500" },
+      { name: "Coding Mentorship", desc: "Instructional lessons on coding languages, building programming ability", color: "bg-red-500" }
     ],
-    duration: "2-3 lessons"
+    duration: "4-5 lessons"
   },
   {
     phase: 2,
-    title: "Master the Fundamentals",
+    title: "Project-Based Learning",
     icon: BookOpen,
-    description: "Build a solid foundation with core programming concepts",
+    description: "PAWD Members will vote on projects to make and work together to build them out.",
     skills: [
-      "Variables and Data Types",
-      "Control Structures (loops, conditionals)",
-      "Functions and Methods",
-      "Object-Oriented Programming",
-      "Error Handling and Debugging"
+      "Real-World Programming Experience",
+      "Collaborative Coding",
+      "Multiple Programming Languages",
+      "Web Development Skills",
+      "Graphic Design and Visual Interfaces"
     ],
-    duration: "4-6 lessons"
+    duration: "20-30 workdays"
   },
   {
     phase: 3,
-    title: "Design & Web Basics",
+    title: "Peer Review & Improvement",
     icon: Palette,
-    description: "Learn the visual side of development with modern web technologies",
+    description: "You will show your projects to professionals and regulars and improve upon your work.",
     technologies: [
-      { name: "HTML", desc: "Structure your content", color: "bg-orange-500" },
-      { name: "CSS", desc: "Style and layout", color: "bg-blue-500" },
-      { name: "JavaScript", desc: "Add interactivity", color: "bg-purple-500" }
+      { name: "Simple Advice", desc: "Students and teachers will provide base-level advice for improvement", color: "bg-orange-500" },
+      { name: "Professional Tips", desc: "Meet with professional developers to help instruct refinement", color: "bg-blue-500" },
+      { name: "Reconstruction", desc: "Rebuild your projects using the critiques and improved features", color: "bg-purple-500" }
     ],
     duration: "3-4 lessons"
   },
@@ -101,7 +101,7 @@ export default function AboutPage() {
               About PAWD
             </h1>
             <p className="text-xl lg:text-2xl text-purple-100 leading-relaxed">
-              Our comprehensive program takes you from beginner to confident developer through 
+              Our club takes you from beginner to confident developer through 
               structured learning, hands-on projects, and continuous mentorship.
             </p>
           </motion.div>
@@ -121,7 +121,7 @@ export default function AboutPage() {
               Our Learning Journey
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A carefully crafted curriculum designed to take you from zero to hero in programming and web development.
+              A carefully crafted roadmap designed to take you from zero to hero in programming and web development.
             </p>
           </motion.div>
 
