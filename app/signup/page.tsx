@@ -428,7 +428,7 @@ export default function SignupPage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              What Happens Next?
+              What's Next?
             </h2>
             <p className="text-xl mb-12 text-purple-200 max-w-2xl mx-auto">
               After you submit your application, here's what you can expect:
@@ -438,18 +438,18 @@ export default function SignupPage() {
               {[
                 {
                   step: "1",
-                  title: "Application Review",
-                  description: "Our team will review your application within 3-5 business days."
+                  title: "Introductory Session",
+                  description: "Check your e-mail consistenly to be notified for our introductory meeting to PAWD Club."
                 },
                 {
                   step: "2", 
-                  title: "Welcome Email",
-                  description: "You'll receive a welcome email with meeting times and getting started information."
+                  title: "Biweekly Meetings",
+                  description: "We will meet every two weeks for lessons or project workdays."
                 },
                 {
                   step: "3",
-                  title: "First Meeting",
-                  description: "Attend your first PAWD meeting and start your coding journey with us!"
+                  title: "Your Journey Begins",
+                  description: "Keep working on your projects and develop your programming experience!"
                 }
               ].map((item, index) => (
                 <motion.div
