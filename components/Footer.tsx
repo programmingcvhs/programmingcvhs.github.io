@@ -61,7 +61,7 @@ export function Footer() {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold">PAWD</h3>
-                    <p className="text-gray-400">Programming and Web Development</p>
+                    <p className="text-gray-400">Programming and Web Development Club</p>
                   </div>
                 </div>
                 
@@ -168,16 +168,6 @@ export function Footer() {
                   <Heart className="w-4 h-4 text-red-500" />
                 </motion.div>
                 <span>by our amazing team.</span>
-              </div>
-              
-              <div className="flex items-center space-x-6 text-sm text-gray-500">
-                <Link href="/privacy" className="hover:text-purple-400 transition-colors">
-                  Privacy Policy
-                </Link>
-                <Link href="/terms" className="hover:text-purple-400 transition-colors">
-                  Terms of Service
-                </Link>
-                <span>Houston ISD</span>
               </div>
             </motion.div>
           </div>
