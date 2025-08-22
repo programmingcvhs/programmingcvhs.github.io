@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, Award, Code, Heart } from 'lucide-react'
+import { Github, Instagram, Mail, Award, Code, Heart } from 'lucide-react'
 import { Card } from '@/components/ui/Card'
 
 // Team members data - easy to map over
@@ -17,7 +17,7 @@ const teamMembers = [
     achievements: ["2nd place in NASA Space Apps Texas Division Projects", "Finalist at TXSEF in Biomedical Engineering"],
     social: {
       github: "https://github.com/alexchen",
-      linkedin: "https://linkedin.com/in/alexchen",
+      instagram: "https://instagram.com/alexchen",
       email: "alex@pawd.club"
     },
     favoriteProject: "AI-powered disease detection algorithm"
@@ -33,7 +33,7 @@ const teamMembers = [
     achievements: ["2nd place in NASA Space Apps Texas Division Projects", "Finalist at SEFH in Physics & Astronomy"],
     social: {
       github: "https://github.com/sarahrodriguez",
-      linkedin: "https://linkedin.com/in/sarahrodriguez",
+      instagram: "https://instagram.com/sarahrodriguez",
       email: "sarah@pawd.club"
     },
     favoriteProject: "Quantum tunneling detection application"
@@ -49,7 +49,7 @@ const teamMembers = [
     achievements: ["2nd place in NASA Space Apps Texas Division Projects", "Finalist at SEFH in Physics & Astronomy"],
     social: {
       github: "https://github.com/marcusjohnson",
-      linkedin: "https://linkedin.com/in/marcusjohnson",
+      instagram: "https://instagram.com/marcusjohnson",
       email: "marcus@pawd.club"
     },
     favoriteProject: "Integrated AI chatbot"
@@ -65,7 +65,7 @@ const teamMembers = [
     achievements: ["Published app with 500+ student downloads", "2nd Place in Texas-level hackathon"],
     social: {
       github: "https://github.com/emmaliu",
-      linkedin: "https://linkedin.com/in/emmaliu",
+      instagram: "https://instagram.com/emmaliu",
       email: "emma@pawd.club"
     },
     favoriteProject: "Computer mobile access application"
@@ -173,12 +173,12 @@ export default function TeamPage() {
                             <Github className="w-4 h-4 text-gray-600 hover:text-purple-600" />
                           </motion.a>
                           <motion.a 
-                            href={member.social.linkedin}
+                            href={member.social.instagram}
                             className="p-2 bg-gray-100 hover:bg-purple-100 rounded-lg transition-colors"
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                           >
-                            <Linkedin className="w-4 h-4 text-gray-600 hover:text-purple-600" />
+                            <Instagram className="w-4 h-4 text-gray-600 hover:text-purple-600" />
                           </motion.a>
                           <motion.a 
                             href={`mailto:${member.social.email}`}
