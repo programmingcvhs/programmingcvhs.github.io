@@ -166,3 +166,168 @@ export default function AboutPage() {
                               </div>
                             </div>
                           ))}
+                        </div>
+                      )}
+                      
+                      {/* Skills */}
+                      {phase.skills && (
+                        <div className="grid md:grid-cols-2 gap-2">
+                          {phase.skills.map((skill, skillIndex) => (
+                            <div key={skillIndex} className="flex items-center p-2">
+                              <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                              <span className="text-gray-700">{skill}</span>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                      
+                      {/* Technologies */}
+                      {phase.technologies && (
+                        <div className="space-y-3">
+                          {phase.technologies.map((tech, techIndex) => (
+                            <div key={techIndex} className="flex items-center p-3 bg-gray-50 rounded-lg">
+                              <div className={`w-3 h-3 ${tech.color} rounded-full mr-3`}></div>
+                              <div>
+                                <div className="font-semibold text-gray-900">{tech.name}</div>
+                                <div className="text-sm text-gray-600">{tech.desc}</div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                      
+                      {/* Projects */}
+                      {phase.projects && (
+                        <div className="space-y-3">
+                          {phase.projects.map((project, projectIndex) => (
+                            <div key={projectIndex} className="flex items-start p-3 bg-gradient-to-r from-purple-50 to-blue-50 rounded-lg">
+                              <div className="w-2 h-2 bg-purple-500 rounded-full mr-3 mt-2"></div>
+                              <span className="text-gray-700">{project}</span>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </Card>
+                  </div>
+                  
+                  {/* Phase Number */}
+                  <div className="flex-shrink-0">
+                    <motion.div 
+                      className="w-24 h-24 lg:w-32 lg:h-32 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full flex items-center justify-center text-white shadow-xl"
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                    >
+                      <span className="text-3xl lg:text-4xl font-bold">{phase.phase}</span>
+                    </motion.div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
+              Why Choose PAWD?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We provide more than just coding lessons – we build a foundation for your future in technology.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1, duration: 0.6 }}
+              >
+                <Card className="p-6 text-center hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 bg-white border-0 shadow-lg h-full">
+                  <motion.div 
+                    className="flex justify-center mb-4"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  >
+                    <div className="p-3 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl text-white">
+                      <benefit.icon className="w-6 h-6" />
+                    </div>
+                  </motion.div>
+                  <h3 className="text-lg font-bold mb-3 text-gray-900 group-hover:text-purple-600 transition-colors">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {benefit.description}
+                  </p>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Success Showcase */}
+      <section className="py-20 code-bg text-white relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full opacity-10">
+            <div className="grid grid-cols-10 gap-2 h-full">
+              {Array.from({length: 100}).map((_, i) => (
+                <motion.div
+                  key={i}
+                  className="bg-purple-500 rounded"
+                  animate={{ opacity: [0.1, 0.3, 0.1] }}
+                  transition={{ duration: 3, repeat: Infinity, delay: i * 0.05 }}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+        
+        <div className="relative container mx-auto px-4">
+          <motion.div 
+            className="text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              Your Success, Our Mission
+            </h2>
+            <p className="text-xl text-purple-200 mb-8 max-w-3xl mx-auto">
+              Every project you build, every skill you master, and every breakthrough you achieve 
+              will be showcased on our dedicated website. We celebrate your growth and help you 
+              build a portfolio that opens doors.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8 mt-12">
+              {[
+                { label: "GitHub Integration", desc: "All projects version-controlled and showcased" },
+                { label: "Portfolio Website", desc: "Professional display of your achievements" },
+                { label: "Community Recognition", desc: "Celebrate milestones with fellow developers" }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  className="p-6 glass-effect rounded-xl"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
+                  <h3 className="text-lg font-bold mb-2">{item.label}</h3>
+                  <p className="text-purple-200 text-sm">{item.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  )
+}
