@@ -172,8 +172,11 @@ export default function HomePage() {
             <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {[
                 { name: "Python", desc: "Data science, automation, and backend development" },
+                { name: "Java", desc: "Object-oriented programming and enterprise applications" },
+                { name: "HTML & CSS", desc: "Building and styling static websites" },
                 { name: "JavaScript", desc: "Interactive web applications and modern frameworks" },
-                { name: "Java", desc: "Object-oriented programming and enterprise applications" }
+                { name: "C++", desc: "High-performance applications, games, and systems programming" },
+                { name: "SQL", desc: "Managing and querying databases" }
               ].map((skill, index) => (
                 <motion.div
                   key={index}
