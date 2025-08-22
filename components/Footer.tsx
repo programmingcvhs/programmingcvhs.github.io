@@ -160,7 +160,7 @@ export function Footer() {
               transition={{ delay: 0.6, duration: 0.6 }}
             >
               <div className="flex items-center space-x-2 text-gray-400">
-                <span>© {new Date().getFullYear()} PAWD Club. Made with</span>
+                <span>© {new Date().getFullYear()} Programming & Web Development Club. Made with</span>
                 <motion.div
                   animate={{ scale: [1, 1.2, 1] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
