@@ -16,7 +16,7 @@ const teamMembers = [
     image: "/api/placeholder/400/400",
     achievements: ["2nd place in NASA Space Apps Texas Division Projects", "Finalist at TXSEF in Biomedical Engineering"],
     social: {
-      email: "alex@pawd.club"
+      email: "s1831922@online.houstonisd.org"
     },
     favoriteProject: "AI-powered disease detection algorithm"
   },
@@ -30,7 +30,7 @@ const teamMembers = [
     image: "/api/placeholder/400/400",
     achievements: ["2nd place in NASA Space Apps Texas Division Projects", "Finalist at SEFH in Physics & Astronomy"],
     social: {
-      email: "sarah@pawd.club"
+      email: "s1889490@online.houstonisd.org"
     },
     favoriteProject: "Quantum tunneling detection application"
   },
@@ -44,7 +44,7 @@ const teamMembers = [
     image: "/api/placeholder/400/400",
     achievements: ["2nd place in NASA Space Apps Texas Division Projects", "Finalist at SEFH in Physics & Astronomy"],
     social: {
-      email: "marcus@pawd.club"
+      email: "s1885796@online.houstonisd.org"
     },
     favoriteProject: "Integrated AI chatbot"
   },
@@ -58,7 +58,7 @@ const teamMembers = [
     image: "/api/placeholder/400/400",
     achievements: ["Published app with 500+ student downloads", "2nd Place in Texas-level hackathon"],
     social: {
-      email: "emma@pawd.club"
+      email: "s2037896@online.houstonisd.org"
     },
     favoriteProject: "Computer mobile access application"
   }
