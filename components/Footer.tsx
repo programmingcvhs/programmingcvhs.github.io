@@ -14,13 +14,13 @@ const footerLinks = {
   resources: [
     { href: 'https://github.com', label: 'GitHub', external: true },
     { href: 'https://developer.mozilla.org', label: 'MDN Docs', external: true },
-    { href: 'https://stackoverflow.com', label: 'Stack Overflow', external: true },
+    { href: 'https://www.w3schools.com/', label: 'W3Schools', external: true },
     { href: 'https://codepen.io', label: 'CodePen', external: true }
   ],
   social: [
-    { href: 'https://github.com/pawd-club', icon: Github, label: 'GitHub' },
-    { href: 'https://instagram.com/pawd.club', icon: Instagram, label: 'Instagram' },
-    { href: 'mailto:info@pawd.club', icon: Mail, label: 'Email' }
+    { href: 'https://github.com/programmingcvhs', icon: Github, label: 'GitHub' },
+    { href: 'https://instagram.com/programmingcvhs', icon: Instagram, label: 'Instagram' },
+    { href: 'mailto:s1831922@online.houstonisd.org', icon: Mail, label: 'Email' }
   ]
 }
 
