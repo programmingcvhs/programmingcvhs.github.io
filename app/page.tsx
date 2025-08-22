@@ -218,7 +218,7 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Ready to Start Your Coding Journey?
+              Ready to Start Your Collaborative Coding Journey?
             </h2>
             <p className="text-xl mb-10 text-purple-200 max-w-2xl mx-auto">
               Join PAWD today and transform from a beginner to a confident developer 
