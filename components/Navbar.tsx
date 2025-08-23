@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Code } from 'lucide-react'
+import { Menu, X, Code, Megaphone, Users } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
@@ -10,12 +10,12 @@ const navItems = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/team', label: 'Team' },
-  { href: '/signup', label: 'Join Us' }
 ]
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [showBanner, setShowBanner] = useState(true)
   const pathname = usePathname()
 
   useEffect(() => {
@@ -28,12 +28,50 @@ export function Navbar() {
 
   return (
     <>
+      {/* Announcement Banner */}
+      <AnimatePresence>
+        {showBanner && (
+          <motion.div
+            className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -50 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="container mx-auto px-4">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-3 flex-1">
+                  <Megaphone className="w-5 h-5 text-purple-200" />
+                  <p className="text-sm md:text-base font-medium">
+                    <span className="hidden sm:inline">🎉 Applications are now open for PAWD Club! </span>
+                    Join our programming community and start building amazing projects.
+                    <Link 
+                      href="/signup" 
+                      className="ml-2 underline hover:no-underline font-semibold"
+                    >
+                      Apply now!
+                    </Link>
+                  </p>
+                </div>
+                <button
+                  onClick={() => setShowBanner(false)}
+                  className="ml-4 p-1 hover:bg-white/20 rounded transition-colors"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <motion.nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed left-0 right-0 z-40 transition-all duration-300 ${
           scrolled
             ? 'bg-white/95 backdrop-blur-md shadow-lg'
             : 'bg-white/95 backdrop-blur-md shadow-lg'
         }`}
+        style={{ top: showBanner ? '60px' : '0px' }}
         initial={{ y: 0 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
@@ -49,8 +87,11 @@ export function Navbar() {
               >
                 <Code className="w-6 h-6 text-white" />
               </motion.div>
-              <span className="text-xl font-bold text-gray-900">
+              <span className="text-xl font-bold text-gray-900 hidden lg:block">
                 Programming & Web Development Club
+              </span>
+              <span className="text-xl font-bold text-gray-900 lg:hidden">
+                PAWD Club
               </span>
             </Link>
 
@@ -77,6 +118,18 @@ export function Navbar() {
                   </motion.div>
                 </Link>
               ))}
+              
+              {/* Join Us Button */}
+              <Link href="/signup">
+                <motion.div
+                  className="ml-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-2 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center space-x-2"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Users className="w-4 h-4" />
+                  <span>Join Us</span>
+                </motion.div>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -122,14 +175,32 @@ export function Navbar() {
                     </Link>
                   </motion.div>
                 ))}
+                
+                {/* Mobile Join Us Button */}
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: navItems.length * 0.1 }}
+                >
+                  <Link
+                    href="/signup"
+                    onClick={() => setIsOpen(false)}
+                    className="block mx-4 mt-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-xl font-semibold text-center shadow-lg hover:shadow-xl transition-all duration-300"
+                  >
+                    <div className="flex items-center justify-center space-x-2">
+                      <Users className="w-4 h-4" />
+                      <span>Join PAWD Today</span>
+                    </div>
+                  </Link>
+                </motion.div>
               </div>
             </motion.div>
           )}
         </AnimatePresence>
       </motion.nav>
 
-      {/* Spacer to prevent content from hiding behind fixed navbar */}
-      <div className="h-16" />
+      {/* Dynamic Spacer to prevent content from hiding behind navbar + banner */}
+      <div className={`transition-all duration-300 ${showBanner ? 'h-32' : 'h-16'}`} />
     </>
   )
 }
