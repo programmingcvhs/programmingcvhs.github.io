@@ -32,22 +32,22 @@ export function Navbar() {
       <AnimatePresence>
         {showBanner && (
           <motion.div
-            className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3"
+            className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-600 to-blue-600 text-white"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -50 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="container mx-auto px-4">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-3 flex-1">
-                  <Megaphone className="w-5 h-5 text-purple-200" />
-                  <p className="text-sm md:text-base font-medium">
+            <div className="container mx-auto px-4 py-3">
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex items-start space-x-3 flex-1 min-w-0">
+                  <Megaphone className="w-5 h-5 text-purple-200 flex-shrink-0 mt-0.5" />
+                  <p className="text-sm md:text-base font-medium leading-tight">
                     <span className="hidden sm:inline">🎉 Applications are now open for PAWD Club! </span>
                     Join our programming community and start building amazing projects.
                     <Link 
                       href="/signup" 
-                      className="ml-2 underline hover:no-underline font-semibold"
+                      className="ml-2 underline hover:no-underline font-semibold whitespace-nowrap"
                     >
                       Apply now!
                     </Link>
@@ -55,7 +55,7 @@ export function Navbar() {
                 </div>
                 <button
                   onClick={() => setShowBanner(false)}
-                  className="ml-4 p-1 hover:bg-white/20 rounded transition-colors"
+                  className="flex-shrink-0 p-1 hover:bg-white/20 rounded transition-colors mt-0.5"
                 >
                   <X className="w-4 h-4" />
                 </button>
@@ -71,7 +71,7 @@ export function Navbar() {
             ? 'bg-white/95 backdrop-blur-md shadow-lg'
             : 'bg-white/95 backdrop-blur-md shadow-lg'
         }`}
-        style={{ top: showBanner ? '60px' : '0px' }}
+        style={{ top: showBanner ? '0px' : '0px', paddingTop: showBanner ? '60px' : '0px' }}
         initial={{ y: 0 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
@@ -200,7 +200,7 @@ export function Navbar() {
       </motion.nav>
 
       {/* Dynamic Spacer to prevent content from hiding behind navbar + banner */}
-      <div className={`transition-all duration-300 ${showBanner ? 'h-32' : 'h-16'}`} />
+      <div className={`transition-all duration-300 ${showBanner ? 'h-28' : 'h-16'}`} />
     </>
   )
 }
