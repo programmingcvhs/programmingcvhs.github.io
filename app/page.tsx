@@ -93,7 +93,7 @@ export default function HomePage() {
               transition={{ delay: 0.6, duration: 0.8 }}
             >
               <Link href="/signup">
-                <Button className="bg-white text-purple-600 hover:bg-purple-600 hover:text-white px-8 py-3 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+                <Button className="bg-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-8 py-3 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
                   Join PAWD Today
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
