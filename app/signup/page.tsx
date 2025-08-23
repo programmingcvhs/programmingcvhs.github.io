@@ -16,6 +16,15 @@ interface FormData {
   honorCode: boolean
 }
 
+interface FormErrors {
+  name?: string
+  grade?: string
+  email?: string
+  q1?: string
+  q2?: string
+  honorCode?: string
+}
+
 const gradeOptions = [
   "9th - Freshman",
   "10th - Sophomore", 
@@ -35,7 +44,7 @@ export default function SignupPage() {
   
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
-  const [errors, setErrors] = useState<Partial<FormData>>({})
+  const [errors, setErrors] = useState<FormErrors>({})
 
   const validateEmail = (email: string): boolean => {
     const emailRegex = /^s\d{7}@online\.houstonisd\.org$/
@@ -43,7 +52,7 @@ export default function SignupPage() {
   }
 
   const validateForm = (): boolean => {
-    const newErrors: Partial<FormData> = {}
+    const newErrors: FormErrors = {}
     
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required'
@@ -117,7 +126,7 @@ export default function SignupPage() {
 
   const handleInputChange = (field: keyof FormData, value: string | boolean) => {
     setFormData(prev => ({ ...prev, [field]: value }))
-    if (errors[field]) {
+    if (errors[field as keyof FormErrors]) {
       setErrors(prev => ({ ...prev, [field]: undefined }))
     }
   }
