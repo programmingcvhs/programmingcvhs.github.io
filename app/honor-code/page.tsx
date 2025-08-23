@@ -118,7 +118,7 @@ export default function HonorCodePage() {
             </motion.div>
             
             <h1 className="text-5xl lg:text-6xl font-bold mb-6">
-              🛡️ PAWD Honor Code
+              PAWD Honor Code
             </h1>
             <p className="text-xl lg:text-2xl text-purple-100 leading-relaxed">
               The Programming & Web Development Club (PAWD) is a community built on respect, integrity, 
@@ -199,7 +199,7 @@ export default function HonorCodePage() {
               
               <div className="mt-6 p-4 bg-yellow-100 border border-yellow-300 rounded-lg">
                 <p className="text-gray-800 font-medium">
-                  Decisions will be made case-by-case by club leadership and the club advisor.
+                  Decisions will be made case-by-case by club leadership and the club sponsor.
                 </p>
               </div>
             </Card>
