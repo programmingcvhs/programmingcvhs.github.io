@@ -181,7 +181,7 @@ export default function HonorCodePage() {
                 <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-pink-600 rounded-xl flex items-center justify-center text-white mr-4">
                   <ScrollText className="w-6 h-6" />
                 </div>
-                <h2 className="text-3xl font-bold text-gray-900">📜 Violations</h2>
+                <h2 className="text-3xl font-bold text-gray-900">Violations</h2>
               </div>
               
               <p className="text-gray-700 mb-6 text-lg">
