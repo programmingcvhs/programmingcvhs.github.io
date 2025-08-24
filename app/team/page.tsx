@@ -9,7 +9,7 @@ const teamMembers = [
   {
     id: 1,
     name: "Kavin Elangovan",
-    role: "Club President, Full-Stack Developer, Graphic Designer",
+    role: "Club President, Front-End Developer, Graphic Designer",
     grade: "10th Grade",
     bio: "Passionate about creating web applications that solve real-world problems. Started coding as a child and now mentors fellow students.",
     skills: ["Python", "Node.js", "HTML/CSS/JS", "Photoshop", "API Interfaces", "Image Editing"],
@@ -25,10 +25,10 @@ const teamMembers = [
     name: "Divin Giddaluru",
     role: "Vice President, Full-Stack Developer, Coding Instructor",
     grade: "10th Grade",
-    bio: "Creates user-friendly, useful applications. Combines great design makes accessible technology.",
-    skills: ["Python", "Node.js", "HTML/CSS/JS", "Scientific Integration"],
+    bio: "Driven by curiosity and creativity, I build web applications that solve problems and inspire ideas. I enjoy mentoring peers and growing through collaboration.",
+    skills: ["Python", "Node.js", "HTML/CSS/JS", "Artificial Intelligence", "Full Stack Development", "Machine Learning", "Computer Vision", "Digital Learning Tools", "Cloud Integration", "Real-Time AI Applications"],
     image: "/api/placeholder/400/400",
-    achievements: ["2nd place in NASA Space Apps Texas Division Projects", "Finalist at SEFH in Physics & Astronomy"],
+    achievements: ["2nd place in NASA Space Apps Texas Division Projects", "Finalist at SEFH in Physics & Astronomy", "PCAP™ Certified Associate in Python Programming", "Developed accessible tools for legal, financial, and digital literacy", "Created educational games and simulations in science & technology", "Led full-stack development of resource discovery platforms", "Deployed AI apps using Streamlit, SQL, and PyTorch", "Designed cloud-based tools with Azure authentication integration"],
     social: {
       email: "s1889490@online.houstonisd.org"
     },
