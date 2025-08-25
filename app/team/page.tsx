@@ -11,7 +11,7 @@ const teamMembers = [
     name: "Ramya Elangovan",
     role: "Club President, Artificial Intelligence & Machine Learning Specialist",
     grade: "12th Grade",
-    bio: "Add...",
+    bio: "Artificial intelligence and machine learning specialist using the power of coding and software to create revolutionary applications with real-world impact. Utilizes technological skills to solve medical problems in a simple, efficient, and effective way.",
     skills: ["Python", "Deep Learning", "Artificial Intelligence & Machine Learning", "PyTorch", "Data Science", "Biostatistics"],
     image: "/api/placeholder/400/400",
     achievements: ["Presented AI research at the Symposium for Artificial Intelligence and Learning Health Systems", "Oral & Poster Presentation of Scientific Research at ENDO2025", "Poster Presenter at the International Symposium of Biomedical Imaging"],
@@ -25,7 +25,7 @@ const teamMembers = [
     name: "Kavin Elangovan",
     role: "Vice President, Front-End Developer, Graphic Designer",
     grade: "10th Grade",
-    bio: "Add...",
+    bio: "Front-end coding expert focused on creating immersive visual experiences that are interactive and appealing to users. Master of using graphic design and digital art skills in a variety of settings and interfaces.",
     skills: ["Python", "Web Development", "Software Applications", "Graphic Design & Image Editing", "API Interfaces"],
     image: "/api/placeholder/400/400",
     achievements: ["AP and CollegeBoard-certified Computer Science tutor", "Finalist at TXSEF in Biomedical Engineering", "2nd place in NASA Space Apps Texas Division Projects"],
@@ -56,7 +56,7 @@ const teamMembers = [
     bio: "Add...",
     skills: ["Python", "Node.js", "HTML/CSS/JS", "Web Development", "Data Management"],
     image: "/api/placeholder/400/400",
-    achievements: ["Achievement 1", "Achievement 2", "Achievement 3"],
+    achievements: ["2nd place in NASA Space Apps Texas Division Projects", "Finalist at SEFH in Physics & Astronomy", "Achievement 3"],
     social: {
       email: "s1885796@online.houstonisd.org"
     },
