@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Shield, Lock, Users, Code, Brain, ScrollText, ExternalLink } from 'lucide-react'
+import { Shield, Lock, Users, Code, Brain, ScrollText, ExternalLink, AlertTriangle } from 'lucide-react'
 import { Card } from '@/components/ui/Card'
 
 const sections = [
@@ -59,6 +59,10 @@ const sections = [
       {
         title: "Be Professional",
         description: "Act appropriately in meetings, group chats, and during collaborations. This club prepares you for real-world teamwork."
+      },
+      {
+        title: "Ethical Technology Use",
+        description: "Do not create or contribute to projects that are designed to harm others, violate privacy, spread misinformation, or engage in illegal activities."
       }
     ]
   },
@@ -86,7 +90,8 @@ const sections = [
 const violations = [
   "A warning from the club sponsor or an officer",
   "Temporary suspension from meetings or projects", 
-  "Removal from the club (for repeated or serious offenses)"
+  "Removal from the club (for repeated or serious offenses)",
+  "Creating projects designed to harm others, violate privacy, or engage in illegal activities"
 ]
 
 export default function HonorCodePage() {
@@ -167,8 +172,35 @@ export default function HonorCodePage() {
         </div>
       </section>
 
-      {/* Violations Section */}
+      {/* Club Responsibility Disclaimer */}
       <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <Card className="p-8 shadow-xl bg-gradient-to-r from-yellow-50 to-orange-50 border-0">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-xl flex items-center justify-center text-white mr-4">
+                  <AlertTriangle className="w-6 h-6" />
+                </div>
+                <h2 className="text-3xl font-bold text-gray-900">Club Responsibility</h2>
+              </div>
+              
+              <div className="p-6 bg-white/80 border border-yellow-200 rounded-lg">
+                <p className="text-gray-800 text-lg leading-relaxed">
+                  <strong>Important Notice:</strong> The Programming & Web Development Club (PAWD), its officers, advisors, and affiliated school personnel are not responsible for any student misuse of technology, programming knowledge, or skills learned through club activities. Students are solely responsible for ensuring their projects and use of technology comply with all applicable laws, school policies, and ethical standards. Any harmful, illegal, or inappropriate use of knowledge gained from the club is strictly prohibited and may result in immediate removal from the club and disciplinary action.
+                </p>
+              </div>
+            </Card>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Violations Section */}
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
