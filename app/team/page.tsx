@@ -18,7 +18,7 @@ const teamMembers = [
     social: {
       email: "s1828320@online.houstonisd.org"
     },
-    favoriteProject: "Funduscopy segmentation model using deep learning"
+    favoriteProject: "AI-powered algorithm for detection of ocular diseases"
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ const teamMembers = [
     social: {
       email: "s1831922@online.houstonisd.org"
     },
-    favoriteProject: "AI-powered disease detection algorithm"
+    favoriteProject: "Deep learning multiclass cancer diagnosis application"
   },
   {
     id: 3,
