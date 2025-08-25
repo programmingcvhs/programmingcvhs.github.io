@@ -60,7 +60,7 @@ const teamMembers = [
     social: {
       email: "s1885796@online.houstonisd.org"
     },
-    favoriteProject: "Integrated AI chatbot"
+    favoriteProject: "Integrated multifunctional AI chatbot"
   }
 ]
 
