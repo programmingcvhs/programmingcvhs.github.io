@@ -53,7 +53,7 @@ const teamMembers = [
     name: "Sathyan Gopal",
     role: "Treasurer, Web Development Specialist",
     grade: "10th Grade",
-    bio: "Add...",
+    bio: "Experienced programmer in Python and Java languages to create practical and impactful applications. Financially-skilled manager of resources and data with both digital and real-world applicability.",
     skills: ["Python", "Streamlit", "HTML/CSS/JS", "Web Development", "Data Management"],
     image: "/api/placeholder/400/400",
     achievements: ["2nd Place in NASA Space Apps Texas Division Projects", "Finalist at SEFH in Physics & Astronomy", "Harvard-Certified in CS50 Curriculum"],
