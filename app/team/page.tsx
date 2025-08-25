@@ -11,7 +11,7 @@ const teamMembers = [
     name: "Kavin Elangovan",
     role: "Club President, Front-End Developer, Graphic Designer",
     grade: "10th Grade",
-    bio: "Passionate about creating web applications that solve real-world problems. Started coding as a child and now mentors fellow students.",
+    bio: "Curiosity and creativity drive the development of web applications that solve real problems and spark new ideas. Passion for mentorship and collaboration fosters growth while inspiring others.",
     skills: ["Python", "Node.js", "HTML/CSS/JS", "Photoshop", "API Interfaces", "Image Editing"],
     image: "/api/placeholder/400/400",
     achievements: ["2nd place in NASA Space Apps Texas Division Projects", "Finalist at TXSEF in Biomedical Engineering"],
@@ -26,9 +26,9 @@ const teamMembers = [
     role: "Vice President, Full-Stack Developer, Coding Instructor",
     grade: "10th Grade",
     bio: "Driven by curiosity and creativity, I build web applications that solve problems and inspire ideas. I enjoy mentoring peers and growing through collaboration.",
-    skills: ["Python", "Node.js", "HTML/CSS/JS", "Artificial Intelligence", "Full Stack Development", "Machine Learning", "Computer Vision", "Digital Learning Tools", "Cloud Integration", "Real-Time AI Applications"],
+    skills: ["Python", "Node.js", "HTML/CSS/JS", "Artificial Intelligence", "Machine Learning", "Computer Vision", "Cloud Integration", "Real-Time AI Applications", "API"],
     image: "/api/placeholder/400/400",
-    achievements: ["2nd place in NASA Space Apps Texas Division Projects", "Finalist at SEFH in Physics & Astronomy", "PCAP™ Certified Associate in Python Programming", "Developed accessible tools for legal, financial, and digital literacy", "Created educational games and simulations in science & technology", "Led full-stack development of resource discovery platforms", "Deployed AI apps using Streamlit, SQL, and PyTorch", "Designed cloud-based tools with Azure authentication integration"],
+    achievements: ["2nd place in NASA Space Apps Texas Division Projects", "Finalist at SEFH in Physics & Astronomy", "Certified Associate in Python & JS Programming"],
     social: {
       email: "s1889490@online.houstonisd.org"
     },
