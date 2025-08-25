@@ -11,24 +11,23 @@ const teamMembers = [
     name: "Ramya Elangovan",
     role: "Club President, Artificial Intelligence & Machine Learnig Specialist",
     grade: "12th Grade",
-    bio: "Curiosity and creativity drive the development of web applications that solve real problems and spark new ideas. Passion for mentorship and collaboration fosters growth while inspiring others.",
+    bio: "Add...",
     skills: ["Python", "Node.js", "HTML/CSS/JS", "Photoshop", "API Interfaces", "Image Editing"],
     image: "/api/placeholder/400/400",
-    achievements: ["2nd place in NASA Space Apps Texas Division Projects", "Finalist at TXSEF in Biomedical Engineering"],
+    achievements: ["Achievement 1", "Achievement 2", "Achievement 3"],
     social: {
-      email: "s1831922@online.houstonisd.org"
+      email: "s1828320@online.houstonisd.org"
     },
-    favoriteProject: "AI-powered disease detection algorithm"
-  },
+    favoriteProject: "Funduscopy segmentation model using deep learning"
   {
     id: 2,
     name: "Kavin Elangovan",
     role: "Vice President, Front-End Developer, Graphic Designer",
     grade: "10th Grade",
-    bio: "Curiosity and creativity drive the development of web applications that solve real problems and spark new ideas. Passion for mentorship and collaboration fosters growth while inspiring others.",
+    bio: "Add...",
     skills: ["Python", "Node.js", "HTML/CSS/JS", "Photoshop", "API Interfaces", "Image Editing"],
     image: "/api/placeholder/400/400",
-    achievements: ["2nd place in NASA Space Apps Texas Division Projects", "Finalist at TXSEF in Biomedical Engineering"],
+    achievements: ["AP and CollegeBoard-certified Computer Science tutor", "Finalist at TXSEF in Biomedical Engineering", "2nd place in NASA Space Apps Texas Division Projects"],
     social: {
       email: "s1831922@online.houstonisd.org"
     },
@@ -56,7 +55,7 @@ const teamMembers = [
     bio: "Works with data. Builds robust server-side applications. Skilled in website creation and data management.",
     skills: ["Python", "Node.js", "HTML/CSS/JS", "Web Development", "Data Management"],
     image: "/api/placeholder/400/400",
-    achievements: ["2nd place in NASA Space Apps Texas Division Projects", "Finalist at SEFH in Physics & Astronomy"],
+    achievements: ["Achievement 1", "Achievement 2", "Achievement 3"],
     social: {
       email: "s1885796@online.houstonisd.org"
     },
