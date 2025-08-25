@@ -12,7 +12,7 @@ const teamMembers = [
     role: "Club President, Artificial Intelligence & Machine Learning Specialist",
     grade: "12th Grade",
     bio: "Add...",
-    skills: ["Python", "Artificial Intelligence", "Deep Learning", "PyTorch", "Data Science", "Biostatistics"],
+    skills: ["Python", "Artificial Intelligence & Machine Learning", "Deep Learning", "PyTorch", "Data Science", "Biostatistics"],
     image: "/api/placeholder/400/400",
     achievements: ["Achievement 1", "Achievement 2", "Achievement 3"],
     social: {
