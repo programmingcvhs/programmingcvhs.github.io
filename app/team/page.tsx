@@ -42,7 +42,7 @@ const teamMembers = [
     bio: "Developer and AI enthusiast using technology to make education and information more accessible. Experienced in web development, machine learning, and digital accessibility, with a focus on building inclusive, user-centered tools.",
     skills: ["Frontend Development", "Artificial Intelligence", "Backend Development", "Computer Vision", "Cloud Integration"],
     image: "/api/placeholder/400/400",
-    achievements: ["2nd place in NASA Space Apps Texas Division Projects", "Finalist at SEFH in Physics & Astronomy", "Certified Associate in Python & JS Programming"],
+    achievements: ["PCAP-Certified Associated in Python & JS Programming", "Finalist at SEFH in Physics & Astronomy", "Achievement 3"],
     social: {
       email: "s1889490@online.houstonisd.org"
     },
@@ -56,7 +56,7 @@ const teamMembers = [
     bio: "Add...",
     skills: ["Python", "Node.js", "HTML/CSS/JS", "Web Development", "Data Management"],
     image: "/api/placeholder/400/400",
-    achievements: ["2nd place in NASA Space Apps Texas Division Projects", "Finalist at SEFH in Physics & Astronomy", "Achievement 3"],
+    achievements: ["2nd Place in NASA Space Apps Texas Division Projects", "Finalist at SEFH in Physics & Astronomy", "Harvard-Certified in CS50 Curriculum"],
     social: {
       email: "s1885796@online.houstonisd.org"
     },
