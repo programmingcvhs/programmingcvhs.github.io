@@ -12,7 +12,7 @@ const teamMembers = [
     role: "Club President, Artificial Intelligence & Machine Learning Specialist",
     grade: "12th Grade",
     bio: "Artificial intelligence and machine learning specialist using the power of coding and software to create revolutionary applications with real-world impact. Utilizes technological skills to solve medical problems in a simple, efficient, and effective way.",
-    skills: ["Python", "Deep Learning", "Artificial Intelligence & Machine Learning", "PyTorch", "Data Science", "Biostatistics"],
+    skills: ["Python", "Artificial Intelligence", "Deep Learning", "Data Science", "Biostatistics"],
     image: "/api/placeholder/400/400",
     achievements: ["Presented AI research at the Symposium for Artificial Intelligence and Learning Health Systems", "Oral & Poster Presentation of Scientific Research at ENDO2025", "Poster Presenter at the International Symposium of Biomedical Imaging"],
     social: {
@@ -54,7 +54,7 @@ const teamMembers = [
     role: "Treasurer, Web Development Specialist",
     grade: "10th Grade",
     bio: "Add...",
-    skills: ["Python", "Node.js", "HTML/CSS/JS", "Web Development", "Data Management"],
+    skills: ["Python", "Streamlit", "HTML/CSS/JS", "Web Development", "Data Management"],
     image: "/api/placeholder/400/400",
     achievements: ["2nd Place in NASA Space Apps Texas Division Projects", "Finalist at SEFH in Physics & Astronomy", "Harvard-Certified in CS50 Curriculum"],
     social: {
