@@ -42,7 +42,7 @@ const teamMembers = [
     bio: "Developer and AI enthusiast using technology to make education and information more accessible. Experienced in web development, machine learning, and digital accessibility, with a focus on building inclusive, user-centered tools.",
     skills: ["Frontend Development", "Artificial Intelligence", "Backend Development", "Computer Vision", "Cloud Integration"],
     image: "/api/placeholder/400/400",
-    achievements: ["PCAP & JSA-Certified Associated in Python & JS Programming", "Finalist at SEFH in Physics & Astronomy", "Achievement 3"],
+    achievements: ["PCAP & JSA-Certified Associated in Python & JS Programming", "Finalist at SEFH in Physics & Astronomy", "Nationally-Ranked 22nd in PicoCTF Cybersecurity Competition"],
     social: {
       email: "s1889490@online.houstonisd.org"
     },
