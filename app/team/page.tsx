@@ -14,7 +14,7 @@ const teamMembers = [
     bio: "Add...",
     skills: ["Python", "Deep Learning", "Artificial Intelligence & Machine Learning", "PyTorch", "Data Science", "Biostatistics"],
     image: "/api/placeholder/400/400",
-    achievements: ["Achievement 1", "Achievement 2", "Achievement 3"],
+    achievements: ["Presented AI research at the Symposium for Artificial Intelligence and Learning Health Systems", "Oral & Poster Presentation of Scientific Research at ENDO2025", "Poster Presenter at the International Symposium of Biomedical Imaging"],
     social: {
       email: "s1828320@online.houstonisd.org"
     },
