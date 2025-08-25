@@ -54,7 +54,7 @@ const teamMembers = [
     role: "Treasurer, Web Development & Applications Specialist",
     grade: "10th Grade",
     bio: "Experienced programmer in Python and Java languages to create practical and impactful applications. Financially-skilled manager of resources and data with both digital and real-world applicability.",
-    skills: ["Python", "Streamlit", "HTML/CSS/JS", "Web Development", "Data Management"],
+    skills: ["Python", "Streamlit", "HTML/CSS/JS", "Web Development", "Data Management & Statistics"],
     image: "/api/placeholder/400/400",
     achievements: ["2nd Place in NASA Space Apps Texas Division Projects", "Finalist at SEFH in Physics & Astronomy", "Harvard-Certified in CS50 Curriculum"],
     social: {
