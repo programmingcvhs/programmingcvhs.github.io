@@ -8,9 +8,9 @@ import { Card } from '@/components/ui/Card'
 const teamMembers = [
   {
     id: 1,
-    name: "Kavin Elangovan",
-    role: "Club President, Front-End Developer, Graphic Designer",
-    grade: "10th Grade",
+    name: "Ramya Elangovan",
+    role: "Club President, Artificial Intelligence & Machine Learnig Specialist",
+    grade: "12th Grade",
     bio: "Curiosity and creativity drive the development of web applications that solve real problems and spark new ideas. Passion for mentorship and collaboration fosters growth while inspiring others.",
     skills: ["Python", "Node.js", "HTML/CSS/JS", "Photoshop", "API Interfaces", "Image Editing"],
     image: "/api/placeholder/400/400",
@@ -22,8 +22,22 @@ const teamMembers = [
   },
   {
     id: 2,
+    name: "Kavin Elangovan",
+    role: "Vice President, Front-End Developer, Graphic Designer",
+    grade: "10th Grade",
+    bio: "Curiosity and creativity drive the development of web applications that solve real problems and spark new ideas. Passion for mentorship and collaboration fosters growth while inspiring others.",
+    skills: ["Python", "Node.js", "HTML/CSS/JS", "Photoshop", "API Interfaces", "Image Editing"],
+    image: "/api/placeholder/400/400",
+    achievements: ["2nd place in NASA Space Apps Texas Division Projects", "Finalist at TXSEF in Biomedical Engineering"],
+    social: {
+      email: "s1831922@online.houstonisd.org"
+    },
+    favoriteProject: "AI-powered disease detection algorithm"
+  },
+  {
+    id: 3,
     name: "Divin Giddaluru",
-    role: "Vice President, Full-Stack Developer, Coding Instructor",
+    role: "Secretary, Full-Stack Developer, Coding Instructor",
     grade: "10th Grade",
     bio: "Driven by curiosity and creativity, I build web applications that solve problems and inspire ideas. I enjoy mentoring peers and growing through collaboration.",
     skills: ["Python", "Node.js", "HTML/CSS/JS", "Artificial Intelligence", "Machine Learning", "Computer Vision", "Cloud Integration", "Real-Time AI Applications", "API"],
@@ -35,9 +49,9 @@ const teamMembers = [
     favoriteProject: "Quantum tunneling detection application"
   },
   {
-    id: 3,
+    id: 4,
     name: "Sathyan Gopal",
-    role: "Secretary, Web Development Specialist",
+    role: "Treasurer, Web Development Specialist",
     grade: "10th Grade",
     bio: "Works with data. Builds robust server-side applications. Skilled in website creation and data management.",
     skills: ["Python", "Node.js", "HTML/CSS/JS", "Web Development", "Data Management"],
@@ -47,20 +61,6 @@ const teamMembers = [
       email: "s1885796@online.houstonisd.org"
     },
     favoriteProject: "Integrated AI chatbot"
-  },
-  {
-    id: 4,
-    name: "Pavan Gudivada",
-    role: "Treasurer, Social Media Manager",
-    grade: "10th Grade",
-    bio: "Integrates programming with Internet interfaces. Believes in mobile-first development.",
-    skills: ["Social Media Management", "Mobile Interfaces", "Data Management"],
-    image: "/api/placeholder/400/400",
-    achievements: ["Published app with 500+ student downloads", "2nd Place in Texas-level hackathon"],
-    social: {
-      email: "s2037896@online.houstonisd.org"
-    },
-    favoriteProject: "Computer mobile access application"
   }
 ]
 
