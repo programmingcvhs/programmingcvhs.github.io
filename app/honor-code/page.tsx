@@ -84,7 +84,7 @@ const sections = [
 ]
 
 const violations = [
-  "A warning from the club advisor or officer",
+  "A warning from the club sponsor or an officer",
   "Temporary suspension from meetings or projects", 
   "Removal from the club (for repeated or serious offenses)"
 ]
