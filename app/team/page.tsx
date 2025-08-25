@@ -9,10 +9,10 @@ const teamMembers = [
   {
     id: 1,
     name: "Ramya Elangovan",
-    role: "Club President, Artificial Intelligence & Machine Learnig Specialist",
+    role: "Club President, Artificial Intelligence & Machine Learning Specialist",
     grade: "12th Grade",
     bio: "Add...",
-    skills: ["Python", "Node.js", "HTML/CSS/JS", "Photoshop", "API Interfaces", "Image Editing"],
+    skills: ["Python", "Artificial Intelligence", "Deep Learning", "PyTorch", "Data Science", "Biostatistics"],
     image: "/api/placeholder/400/400",
     achievements: ["Achievement 1", "Achievement 2", "Achievement 3"],
     social: {
@@ -26,7 +26,7 @@ const teamMembers = [
     role: "Vice President, Front-End Developer, Graphic Designer",
     grade: "10th Grade",
     bio: "Add...",
-    skills: ["Python", "Node.js", "HTML/CSS/JS", "Photoshop", "API Interfaces", "Image Editing"],
+    skills: ["Python", "Web Development", "Software Applications", "Graphic Design & Image Editing", "API Interfaces"],
     image: "/api/placeholder/400/400",
     achievements: ["AP and CollegeBoard-certified Computer Science tutor", "Finalist at TXSEF in Biomedical Engineering", "2nd place in NASA Space Apps Texas Division Projects"],
     social: {
@@ -40,13 +40,13 @@ const teamMembers = [
     role: "Secretary, Full-Stack Developer, Coding Instructor",
     grade: "10th Grade",
     bio: "Developer and AI enthusiast using technology to make education and information more accessible. Experienced in web development, machine learning, and digital accessibility, with a focus on building inclusive, user-centered tools.",
-    skills: ["Python", "Node.js", "HTML/CSS/JS", "Artificial Intelligence", "Machine Learning", "Computer Vision", "Cloud Integration", "Real-Time AI Applications", "API"],
+    skills: ["Frontend Development", "Artificial Intelligence", "Backend Development", "Computer Vision", "Cloud Integration"],
     image: "/api/placeholder/400/400",
     achievements: ["2nd place in NASA Space Apps Texas Division Projects", "Finalist at SEFH in Physics & Astronomy", "Certified Associate in Python & JS Programming"],
     social: {
       email: "s1889490@online.houstonisd.org"
     },
-    favoriteProject: "Quantum tunneling detection application"
+    favoriteProject: "The website you're on right now 😉"
   },
   {
     id: 4,
