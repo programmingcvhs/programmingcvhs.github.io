@@ -13,6 +13,7 @@ interface FormData {
   email: string
   q1: string
   q2: string
+  q3: string
   honorCode: boolean
 }
 
@@ -22,6 +23,7 @@ interface FormErrors {
   email?: string
   q1?: string
   q2?: string
+  q3?: string
   honorCode?: string
 }
 
@@ -39,6 +41,7 @@ export default function SignupPage() {
     email: '',
     q1: '',
     q2: '',
+    q3: '',
     honorCode: false
   })
   
@@ -76,6 +79,10 @@ export default function SignupPage() {
       newErrors.q2 = 'Please answer this question'
     }
     
+    if (!formData.q3.trim()) {
+      newErrors.q3 = 'Please answer this question'
+    }
+    
     if (!formData.honorCode) {
       newErrors.honorCode = 'You must agree to the Honor Code to join PAWD'
     }
@@ -111,6 +118,7 @@ export default function SignupPage() {
           email: '',
           q1: '',
           q2: '',
+          q3: '',
           honorCode: false
         })
       } else {
@@ -368,6 +376,32 @@ export default function SignupPage() {
                       </p>
                     )}
                   </motion.div>
+
+                  {/* Question 3 */}
+                  <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.6 }}
+                  >
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      What projects would you be interested in doing over the course of the next year? (Specific projects or general fields) *
+                    </label>
+                    <textarea
+                      value={formData.q3}
+                      onChange={(e) => handleInputChange('q3', e.target.value)}
+                      placeholder="Describe projects you'd like to work on or fields you're excited to explore..."
+                      rows={4}
+                      className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all resize-none ${
+                        errors.q3 ? 'border-red-500 bg-red-50' : 'border-gray-300'
+                      }`}
+                    />
+                    {errors.q3 && (
+                      <p className="text-red-600 text-sm mt-1 flex items-center">
+                        <AlertCircle className="w-4 h-4 mr-1" />
+                        {errors.q3}
+                      </p>
+                    )}
+                  </motion.div>
                 </div>
 
                 {/* Honor Code Agreement */}
@@ -375,7 +409,7 @@ export default function SignupPage() {
                   className="space-y-4"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.6 }}
+                  transition={{ delay: 0.7 }}
                 >
                   <h3 className="text-xl font-semibold text-gray-900 border-b border-gray-200 pb-2">
                     <Shield className="w-5 h-5 inline mr-2" />
@@ -420,7 +454,7 @@ export default function SignupPage() {
                   className="pt-6"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.7 }}
+                  transition={{ delay: 0.8 }}
                 >
                   <Button
                     type="submit"
@@ -449,7 +483,7 @@ export default function SignupPage() {
                   className="text-center text-gray-500 text-sm"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ delay: 0.8 }}
+                  transition={{ delay: 0.9 }}
                 >
                   <p>
                     By submitting this form, you agree to join our community and participate 
