@@ -19,6 +19,7 @@ const teamMembers = [
       email: "s1828320@online.houstonisd.org"
     },
     favoriteProject: "Funduscopy segmentation model using deep learning"
+  },
   {
     id: 2,
     name: "Kavin Elangovan",
