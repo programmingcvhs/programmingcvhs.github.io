@@ -102,15 +102,18 @@ export default function SignupPage() {
     setSubmitStatus('idle')
     
     try {
-      const response = await fetch(process.env.SIGN_UP_API_KEY, {
+      // Change this line to use your internal API route
+      const response = await fetch('/api/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify([formData])
+        body: JSON.stringify(formData)
       })
       
-      if (response.ok) {
+      const result = await response.json()
+      
+      if (result.success) {
         setSubmitStatus('success')
         setFormData({
           name: '',
