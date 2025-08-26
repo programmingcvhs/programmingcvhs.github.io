@@ -43,13 +43,13 @@ export function Navbar() {
                 <div className="flex items-start space-x-3 flex-1 min-w-0">
                   <Megaphone className="w-5 h-5 text-purple-200 flex-shrink-0 mt-0.5" />
                   <p className="text-sm md:text-base font-medium leading-tight">
-                    <span className="hidden sm:inline">Sign up for PAWD today! </span>
-                    Join our programming community and start building amazing projects.
+                    <span className="hidden sm:inline">Interest meeting on 9/3. </span>
+                    1st half of lunch, Room 239 (Mr. Mata).
                     <Link 
                       href="/signup" 
                       className="ml-2 underline hover:no-underline font-semibold whitespace-nowrap"
                     >
-                      Apply now!
+                      Join PAWD!
                     </Link>
                   </p>
                 </div>
