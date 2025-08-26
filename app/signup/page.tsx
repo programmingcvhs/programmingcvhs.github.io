@@ -102,18 +102,15 @@ export default function SignupPage() {
     setSubmitStatus('idle')
     
     try {
-      // Change this line to use your internal API route
-      const response = await fetch('/api/signup', {
+      const response = await fetch("https://sheets.livepolls.app/api/spreadsheets/0dc2d533-238d-4ac1-a923-729d22ef9eb3/signup", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify([formData])
       })
       
-      const result = await response.json()
-      
-      if (result.success) {
+      if (response.ok) {
         setSubmitStatus('success')
         setFormData({
           name: '',
