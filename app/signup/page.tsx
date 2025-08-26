@@ -102,7 +102,7 @@ export default function SignupPage() {
     setSubmitStatus('idle')
     
     try {
-      const response = await fetch('process.env.SIGN_UP_API_KEY', {
+      const response = await fetch(process.env.SIGN_UP_API_KEY, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
