@@ -102,7 +102,7 @@ export default function SignupPage() {
     setSubmitStatus('idle')
     
     try {
-      const response = await fetch('https://sheets.livepolls.app/api/spreadsheets/0dc2d533-238d-4ac1-a923-729d22ef9eb3/signup', {
+      const response = await fetch('process.env.SIGN_UP_API_KEY', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
