@@ -2,15 +2,17 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { CheckCircle2, AlertCircle, User, GraduationCap, Mail, Calendar } from 'lucide-react'
+import { CheckCircle2, AlertCircle, User, GraduationCap, Mail, Calendar, Shield, ExternalLink } from 'lucide-react'
 import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
+import Link from 'next/link'
 
 interface FormData {
   date: string
   name: string
   grade: string
   email: string
+  honorCode: boolean
 }
 
 interface FormErrors {
@@ -18,6 +20,7 @@ interface FormErrors {
   name?: string
   grade?: string
   email?: string
+  honorCode?: string
 }
 
 const gradeOptions = [
@@ -32,7 +35,8 @@ export default function AttendancePage() {
     date: '',
     name: '',
     grade: '',
-    email: ''
+    email: '',
+    honorCode: false
   })
   
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -61,8 +65,12 @@ export default function AttendancePage() {
     
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required'
-    } else if (!validateEmail(formData.email)) {
+    } else     if (!validateEmail(formData.email)) {
       newErrors.email = 'Email must be in format s#######@online.houstonisd.org'
+    }
+    
+    if (!formData.honorCode) {
+      newErrors.honorCode = 'You must agree to the Honor Code to mark attendance'
     }
     
     setErrors(newErrors)
@@ -99,7 +107,8 @@ export default function AttendancePage() {
           date: '',
           name: '',
           grade: '',
-          email: ''
+          email: '',
+          honorCode: false
         })
       } else {
         setSubmitStatus('error')
@@ -112,7 +121,7 @@ export default function AttendancePage() {
     }
   }
 
-  const handleInputChange = (field: keyof FormData, value: string) => {
+  const handleInputChange = (field: keyof FormData, value: string | boolean) => {
     setFormData(prev => ({ ...prev, [field]: value }))
     if (errors[field as keyof FormErrors]) {
       setErrors(prev => ({ ...prev, [field]: undefined }))
