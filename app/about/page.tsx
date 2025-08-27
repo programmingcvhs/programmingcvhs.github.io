@@ -1,8 +1,10 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { BookOpen, Palette, Lightbulb, Trophy, Target, Clock, Users, Star } from 'lucide-react'
+import { BookOpen, Palette, Lightbulb, Trophy, Target, Clock, Users, Star, Shield, ArrowRight } from 'lucide-react'
 import { Card } from '@/components/ui/Card'
+import { Button } from '@/components/ui/Button'
+import Link from 'next/link'
 
 const phases = [
   {
@@ -325,6 +327,49 @@ export default function AboutPage() {
                 </motion.div>
               ))}
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Honor Code Link Section */}
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <Card className="p-12 shadow-2xl bg-white border-0 max-w-4xl mx-auto">
+              <div className="flex justify-center mb-8">
+                <div className="p-6 bg-gradient-to-br from-purple-500 to-blue-600 rounded-3xl">
+                  <Shield className="w-16 h-16 text-white" />
+                </div>
+              </div>
+              
+              <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
+                Built on Integrity
+              </h2>
+              
+              <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto">
+                PAWD is more than just a programming club. We're a community built on respect, 
+                integrity, and shared values. Our Honor Code ensures everyone can learn and 
+                grow in a supportive environment.
+              </p>
+              
+              <Link href="/honor-code">
+                <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-4 px-8 text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                  <Shield className="w-5 h-5 mr-2" />
+                  Read Our Honor Code
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
+              
+              <p className="text-gray-500 text-sm mt-4">
+                Understanding and agreeing to our Honor Code is required for all PAWD members
+              </p>
+            </Card>
           </motion.div>
         </div>
       </section>
