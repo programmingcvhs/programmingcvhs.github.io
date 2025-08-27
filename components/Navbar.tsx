@@ -1,8 +1,8 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Code, Megaphone, Users } from 'lucide-react'
+import { Menu, X, Code, Megaphone, Users, ChevronDown, CheckCircle, Shield } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
@@ -12,11 +12,19 @@ const navItems = [
   { href: '/team', label: 'Team' },
 ]
 
+const clubPagesItems = [
+  { href: '/attendance', label: 'Attendance Form', icon: CheckCircle },
+  { href: '/honor-code', label: 'Honor Code', icon: Shield },
+]
+
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [showBanner, setShowBanner] = useState(true)
+  const [showClubDropdown, setShowClubDropdown] = useState(false)
+  const [showMobileClubDropdown, setShowMobileClubDropdown] = useState(false)
   const pathname = usePathname()
+  const dropdownRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +32,17 @@ export function Navbar() {
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setShowClubDropdown(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
 
   return (
@@ -119,6 +138,54 @@ export function Navbar() {
                 </Link>
               ))}
               
+              {/* Club Pages Dropdown */}
+              <div className="relative" ref={dropdownRef}>
+                <button
+                  onClick={() => setShowClubDropdown(!showClubDropdown)}
+                  className={`px-4 py-2 rounded-lg transition-all duration-300 flex items-center space-x-1 ${
+                    clubPagesItems.some(item => pathname === item.href)
+                      ? 'text-purple-600 bg-purple-50'
+                      : 'text-gray-700 hover:text-purple-600 hover:bg-purple-50'
+                  }`}
+                >
+                  <span>Club Pages</span>
+                  <motion.div
+                    animate={{ rotate: showClubDropdown ? 180 : 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <ChevronDown className="w-4 h-4" />
+                  </motion.div>
+                </button>
+                
+                <AnimatePresence>
+                  {showClubDropdown && (
+                    <motion.div
+                      className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-200 py-2 z-50"
+                      initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      {clubPagesItems.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          onClick={() => setShowClubDropdown(false)}
+                          className={`flex items-center px-4 py-3 text-sm transition-colors hover:bg-purple-50 hover:text-purple-600 ${
+                            pathname === item.href
+                              ? 'text-purple-600 bg-purple-50'
+                              : 'text-gray-700'
+                          }`}
+                        >
+                          <item.icon className="w-4 h-4 mr-3" />
+                          {item.label}
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+              
               {/* Join Us Button */}
               <Link href="/signup">
                 <motion.div
@@ -176,11 +243,72 @@ export function Navbar() {
                   </motion.div>
                 ))}
                 
-                {/* Mobile Join Us Button */}
+                {/* Mobile Club Pages Dropdown */}
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: navItems.length * 0.1 }}
+                >
+                  <button
+                    onClick={() => setShowMobileClubDropdown(!showMobileClubDropdown)}
+                    className={`w-full flex items-center justify-between px-4 py-3 rounded-lg transition-all duration-300 ${
+                      clubPagesItems.some(item => pathname === item.href)
+                        ? 'text-purple-600 bg-purple-50 font-semibold'
+                        : 'text-gray-700 hover:text-purple-600 hover:bg-purple-50'
+                    }`}
+                  >
+                    <span>Club Pages</span>
+                    <motion.div
+                      animate={{ rotate: showMobileClubDropdown ? 180 : 0 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <ChevronDown className="w-4 h-4" />
+                    </motion.div>
+                  </button>
+                  
+                  <AnimatePresence>
+                    {showMobileClubDropdown && (
+                      <motion.div
+                        className="ml-4 mt-2 space-y-1"
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        {clubPagesItems.map((item, subIndex) => (
+                          <motion.div
+                            key={item.href}
+                            initial={{ opacity: 0, x: -10 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: subIndex * 0.05 }}
+                          >
+                            <Link
+                              href={item.href}
+                              onClick={() => {
+                                setIsOpen(false)
+                                setShowMobileClubDropdown(false)
+                              }}
+                              className={`flex items-center px-4 py-2 rounded-lg transition-all duration-300 ${
+                                pathname === item.href
+                                  ? 'text-purple-600 bg-purple-50 font-semibold'
+                                  : 'text-gray-600 hover:text-purple-600 hover:bg-purple-50'
+                              }`}
+                            >
+                              <item.icon className="w-4 h-4 mr-3" />
+                              {item.label}
+                            </Link>
+                          </motion.div>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
+                
+                {/* Mobile Join Us Button */}
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: (navItems.length + 1) * 0.1 }}
                 >
                   <Link
                     href="/signup"
