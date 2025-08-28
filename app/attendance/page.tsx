@@ -65,7 +65,7 @@ export default function AttendancePage() {
     
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required'
-    } else     if (!validateEmail(formData.email)) {
+    } else if (!validateEmail(formData.email)) {
       newErrors.email = 'Email must be in format s#######@online.houstonisd.org'
     }
     
@@ -329,12 +329,57 @@ export default function AttendancePage() {
                   )}
                 </motion.div>
 
+                {/* Honor Code Agreement */}
+                <motion.div
+                  className="space-y-4"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.5 }}
+                >
+                  <h3 className="text-xl font-semibold text-gray-900 border-b border-gray-200 pb-2">
+                    <Shield className="w-5 h-5 inline mr-2" />
+                    Agreement
+                  </h3>
+                  
+                  <div className={`p-4 border rounded-xl ${
+                    errors.honorCode ? 'border-red-500 bg-red-50' : 'border-gray-300 bg-gray-50'
+                  }`}>
+                    <label className="flex items-start cursor-pointer">
+                      <input
+                        type="checkbox"
+                        checked={formData.honorCode}
+                        onChange={(e) => handleInputChange('honorCode', e.target.checked)}
+                        className="mt-1 mr-3 w-4 h-4 text-purple-600 border-gray-300 rounded focus:ring-purple-500 focus:ring-2"
+                      />
+                      <span className="text-sm text-gray-700">
+                        I agree to the{' '}
+                        <Link 
+                          href="/honor-code" 
+                          target="_blank"
+                          className="text-purple-600 hover:text-purple-800 font-semibold inline-flex items-center transition-colors duration-300 group"
+                        >
+                          PAWD Honor Code
+                          <ExternalLink className="w-3 h-3 ml-1 opacity-50 group-hover:opacity-100 transition-opacity" />
+                        </Link>
+                        {' '}and commit to upholding the standards of integrity, respect, and continuous learning within our community. *
+                      </span>
+                    </label>
+                    
+                    {errors.honorCode && (
+                      <p className="text-red-600 text-sm mt-2 flex items-center">
+                        <AlertCircle className="w-4 h-4 mr-1" />
+                        {errors.honorCode}
+                      </p>
+                    )}
+                  </div>
+                </motion.div>
+
                 {/* Submit Button */}
                 <motion.div
                   className="pt-6"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5 }}
+                  transition={{ delay: 0.6 }}
                 >
                   <Button
                     type="submit"
@@ -363,7 +408,7 @@ export default function AttendancePage() {
                   className="text-center text-gray-500 text-sm"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ delay: 0.6 }}
+                  transition={{ delay: 0.7 }}
                 >
                   <p>
                     Please fill out this form every time you attend a PAWD meeting 
