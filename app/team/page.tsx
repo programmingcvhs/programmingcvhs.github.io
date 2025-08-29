@@ -1,66 +1,46 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Mail, Award, Code, Heart } from 'lucide-react'
+import { Mail, Heart } from 'lucide-react'
 import { Card } from '@/components/ui/Card'
 
-// Team members data - easy to map over
+// Team members data - simplified to only include essential info
 const teamMembers = [
   {
     id: 1,
-    name: "Ramya Elangovan",
-    role: "Club President, Artificial Intelligence & Machine Learning Specialist",
-    grade: "12th Grade",
-    bio: "Artificial intelligence and machine learning specialist using the power of coding and software to create revolutionary applications with real-world impact. Utilizes technological skills to solve medical problems in a simple, efficient, and effective way.",
-    skills: ["Python", "Artificial Intelligence", "Deep Learning", "Data Science", "Biostatistics"],
-    image: "/api/placeholder/400/400",
-    achievements: ["Presented AI research at the Symposium for Artificial Intelligence and Learning Health Systems", "Oral & Poster Presentation of Scientific Research at ENDO2025", "Poster Presenter at the International Symposium of Biomedical Imaging"],
+    name: "Divin Giddaluru",
+    role: "Club President, Full-Stack Developer, Coding Instructor",
+    grade: "10th Grade",
     social: {
-      email: "s1828320@online.houstonisd.org"
-    },
-    favoriteProject: "AI-powered algorithm for detection of ocular diseases"
+      email: "s1889490@online.houstonisd.org"
+    }
   },
   {
     id: 2,
-    name: "Kavin Elangovan",
-    role: "Vice President, Front-End Developer, Graphic Designer",
+    name: "Sathyan Gopal",
+    role: "Vice President, Web Development & Applications Specialist",
     grade: "10th Grade",
-    bio: "Front-end coding expert focused on creating immersive visual experiences that are interactive and appealing to users. Master of using graphic design and digital art skills in a variety of settings and interfaces.",
-    skills: ["Python", "Web Development", "Software Applications", "Graphic Design & Image Editing", "API Interfaces"],
-    image: "/api/placeholder/400/400",
-    achievements: ["AP and CollegeBoard-certified Computer Science tutor", "Finalist at TXSEF in Biomedical Engineering", "2nd place in NASA Space Apps Texas Division Projects"],
     social: {
-      email: "s1831922@online.houstonisd.org"
-    },
-    favoriteProject: "Deep learning multiclass cancer diagnosis application"
+      email: "s1885796@online.houstonisd.org"
+    }
   },
   {
     id: 3,
-    name: "Divin Giddaluru",
-    role: "Secretary, Full-Stack Developer, Coding Instructor",
+    name: "Pavan Gudivada",
+    role: "Secretary, Social Media Manager",
     grade: "10th Grade",
-    bio: "Developer and AI enthusiast using technology to make education and information more accessible. Experienced in web development, machine learning, and digital accessibility, with a focus on building inclusive, user-centered tools.",
-    skills: ["Frontend Development", "Artificial Intelligence", "Backend Development", "Computer Vision", "Cloud Integration"],
-    image: "/api/placeholder/400/400",
-    achievements: ["PCAP & JSA-Certified Associated in Python & JS Programming", "Finalist at SEFH in Physics & Astronomy", "Nationally-Ranked 22nd in PicoCTF Cybersecurity Competition"],
     social: {
-      email: "s1889490@online.houstonisd.org"
-    },
-    favoriteProject: "The website you're on right now 😉"
+      email: "s2037896@online.houstonisd.org"
+    }
   },
   {
     id: 4,
-    name: "Sathyan Gopal",
-    role: "Treasurer, Web Development & Applications Specialist",
+    name: "Krish Kalla",
+    role: "Treasurer, Data Management",
     grade: "10th Grade",
-    bio: "Experienced programmer in Python and Java languages to create practical and impactful applications. Financially-skilled manager of resources and data with both digital and real-world applicability.",
-    skills: ["Python", "Streamlit", "HTML/CSS/JS", "Web Development", "Data Management & Statistics"],
-    image: "/api/placeholder/400/400",
-    achievements: ["2nd Place in NASA Space Apps Texas Division Projects", "Finalist at SEFH in Physics & Astronomy", "Harvard-Certified in CS50 Curriculum"],
     social: {
-      email: "s1885796@online.houstonisd.org"
-    },
-    favoriteProject: "Integrated multifunctional AI chatbot"
+      email: "s1839398@online.houstonisd.org"
+    }
   }
 ]
 
@@ -121,7 +101,7 @@ export default function TeamPage() {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={member.id}
@@ -130,85 +110,37 @@ export default function TeamPage() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
               >
-                <Card className="p-8 shadow-xl bg-white border-0 hover:shadow-2xl transition-all duration-500 group hover:-translate-y-2 h-full">
-                  <div className="flex flex-col lg:flex-row gap-6">
-                    {/* Profile Image */}
-                    <motion.div 
-                      className="flex-shrink-0"
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                    >
-                      <div className="w-32 h-32 bg-gradient-to-br from-purple-400 to-blue-500 rounded-2xl flex items-center justify-center text-white text-4xl font-bold shadow-lg">
-                        {member.name.split(' ').map(n => n[0]).join('')}
-                      </div>
-                    </motion.div>
-                    
-                    {/* Member Info */}
-                    <div className="flex-1">
-                      <div className="flex items-start justify-between mb-4">
-                        <div>
-                          <h3 className="text-2xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors">
-                            {member.name}
-                          </h3>
-                          <p className="text-purple-600 font-semibold mb-1">{member.role}</p>
-                          <p className="text-gray-500 text-sm">{member.grade}</p>
-                        </div>
-                        
-                        {/* Social Links */}
-                        <div className="flex gap-2">
-                          <motion.a 
-                            href={`mailto:${member.social.email}`}
-                            className="p-2 bg-gray-100 hover:bg-purple-100 rounded-lg transition-colors"
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
-                          >
-                            <Mail className="w-4 h-4 text-gray-600 hover:text-purple-600" />
-                          </motion.a>
-                        </div>
-                      </div>
-                      
-                      <p className="text-gray-600 mb-6 leading-relaxed">{member.bio}</p>
-                      
-                      {/* Skills */}
-                      <div className="mb-6">
-                        <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
-                          <Code className="w-4 h-4 mr-2 text-purple-600" />
-                          Skills
-                        </h4>
-                        <div className="flex flex-wrap gap-2">
-                          {member.skills.map((skill, skillIndex) => (
-                            <span 
-                              key={skillIndex}
-                              className="px-3 py-1 bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700 rounded-full text-sm font-medium"
-                            >
-                              {skill}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                      
-                      {/* Achievements */}
-                      <div className="mb-4">
-                        <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
-                          <Award className="w-4 h-4 mr-2 text-purple-600" />
-                          Key Achievements
-                        </h4>
-                        <ul className="space-y-1">
-                          {member.achievements.map((achievement, achievementIndex) => (
-                            <li key={achievementIndex} className="text-gray-600 text-sm flex items-start">
-                              <div className="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2 mt-2 flex-shrink-0"></div>
-                              {achievement}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      
-                      {/* Favorite Project */}
-                      <div className="p-4 bg-gradient-to-r from-purple-50 to-blue-50 rounded-lg">
-                        <h4 className="font-semibold text-gray-900 mb-1">Favorite Project:</h4>
-                        <p className="text-purple-700 font-medium">{member.favoriteProject}</p>
-                      </div>
+                <Card className="p-6 shadow-xl bg-white border-0 hover:shadow-2xl transition-all duration-500 group hover:-translate-y-2 h-full text-center">
+                  {/* Profile Image */}
+                  <motion.div 
+                    className="flex justify-center mb-6"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  >
+                    <div className="w-24 h-24 bg-gradient-to-br from-purple-400 to-blue-500 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                      {member.name.split(' ').map(n => n[0]).join('')}
                     </div>
+                  </motion.div>
+                  
+                  {/* Member Info */}
+                  <div className="mb-4">
+                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors mb-2">
+                      {member.name}
+                    </h3>
+                    <p className="text-purple-600 font-semibold mb-1 text-sm">{member.role}</p>
+                    <p className="text-gray-500 text-sm mb-4">{member.grade}</p>
+                  </div>
+                  
+                  {/* Social Links */}
+                  <div className="flex justify-center">
+                    <motion.a 
+                      href={`mailto:${member.social.email}`}
+                      className="p-3 bg-gradient-to-r from-purple-100 to-blue-100 hover:from-purple-200 hover:to-blue-200 rounded-lg transition-colors"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                    >
+                      <Mail className="w-5 h-5 text-purple-600" />
+                    </motion.a>
                   </div>
                 </Card>
               </motion.div>
