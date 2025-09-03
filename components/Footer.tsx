@@ -20,7 +20,7 @@ const footerLinks = {
   social: [
     { href: 'https://github.com/programmingcvhs', icon: Github, label: 'GitHub' },
     { href: 'https://instagram.com/programming_cvhs', icon: Instagram, label: 'Instagram' },
-    { href: 'mailto:s1831922@online.houstonisd.org', icon: Mail, label: 'Email' }
+    { href: 'mailto:s1889490@online.houstonisd.org', icon: Mail, label: 'Email' }
   ]
 }
 
